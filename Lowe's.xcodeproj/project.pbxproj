@@ -16,6 +16,7 @@
 		42918905263B0F69005C81BC /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42918904263B0F69005C81BC /* ViewModel.swift */; };
 		42918907263B1293005C81BC /* WeatherError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42918906263B1293005C81BC /* WeatherError.swift */; };
 		4291890C263B5185005C81BC /* ConditionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4291890B263B5185005C81BC /* ConditionsViewModel.swift */; };
+		4291890E263C47CD005C81BC /* WeatherDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4291890D263C47CD005C81BC /* WeatherDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		42918904263B0F69005C81BC /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		42918906263B1293005C81BC /* WeatherError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherError.swift; sourceTree = "<group>"; };
 		4291890B263B5185005C81BC /* ConditionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionsViewModel.swift; sourceTree = "<group>"; };
+		4291890D263C47CD005C81BC /* WeatherDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			children = (
 				42918904263B0F69005C81BC /* ViewModel.swift */,
 				4291890B263B5185005C81BC /* ConditionsViewModel.swift */,
+				4291890D263C47CD005C81BC /* WeatherDetailsViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			files = (
 				42918907263B1293005C81BC /* WeatherError.swift in Sources */,
 				429188EF263B0E36005C81BC /* AppDelegate.swift in Sources */,
+				4291890E263C47CD005C81BC /* WeatherDetailsViewModel.swift in Sources */,
 				42918903263B0E9F005C81BC /* Weather.swift in Sources */,
 				42918905263B0F69005C81BC /* ViewModel.swift in Sources */,
 				4291890C263B5185005C81BC /* ConditionsViewModel.swift in Sources */,
