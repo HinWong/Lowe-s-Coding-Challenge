@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--City Lookup View Controller-->
         <scene sceneID="jY6-gy-hR3">
             <objects>
-                <viewController id="ISU-zT-fe2" sceneMemberID="viewController">
+                <viewController id="ISU-zT-fe2" customClass="CityLookupViewController" customModule="Lowe_s" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sA8-k3-aZY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,10 +43,10 @@
             </objects>
             <point key="canvasLocation" x="904.34782608695662" y="75"/>
         </scene>
-        <!--View Controller-->
+        <!--Conditions View Controller-->
         <scene sceneID="WHC-16-T2M">
             <objects>
-                <viewController id="dOD-2N-xvx" sceneMemberID="viewController">
+                <viewController id="dOD-2N-xvx" customClass="ConditionsViewController" customModule="Lowe_s" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ksq-t4-sXL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,10 +70,10 @@
             </objects>
             <point key="canvasLocation" x="1704" y="75"/>
         </scene>
-        <!--View Controller-->
+        <!--Weather Details View Controller-->
         <scene sceneID="Nfi-de-vkH">
             <objects>
-                <viewController id="euI-Ch-mka" sceneMemberID="viewController">
+                <viewController id="euI-Ch-mka" customClass="WeatherDetailsViewController" customModule="Lowe_s" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="okU-JL-Rdc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
