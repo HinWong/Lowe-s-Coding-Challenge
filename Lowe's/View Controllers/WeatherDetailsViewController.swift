@@ -8,22 +8,24 @@
 import UIKit
 
 class WeatherDetailsViewController: UIViewController {
-
+    
+    @IBOutlet weak var weatherTempLabel: UILabel!
+    @IBOutlet weak var feelsLikeTempLabel: UILabel!
+    @IBOutlet weak var weatherTypeLabel: UILabel!
+    @IBOutlet weak var weatherDescriptionLabel: UILabel!
+    
+    var detailsVM:WeatherDetailsViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func updateLabels() {
+        weatherTempLabel.text = "\(detailsVM?.temperature())"
+        feelsLikeTempLabel.text = "\(detailsVM?.feelsLike() ?? "")"
+        weatherTypeLabel.text = "\(detailsVM?.weatherType() ?? "")"
+        weatherDescriptionLabel.text = "\(detailsVM?.weatherDescrption() ?? "")"
     }
-    */
+
 
 }

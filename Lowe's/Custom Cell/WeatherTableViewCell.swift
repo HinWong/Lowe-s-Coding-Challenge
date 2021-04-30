@@ -15,8 +15,8 @@ class WeatherTableViewCell: UITableViewCell {
     func updateLabels() {
         var viewModel: WeatherDetailsViewModel? {
             didSet {
-                weatherTemperatureLabel.text = String(viewModel?.temperature())
-                weatherConditionsLabel.text = viewModel?.weatherDescrption()
+                weatherTemperatureLabel.text = "\(String(describing: viewModel?.temperature()))"
+                weatherConditionsLabel.text = "\(String(describing: viewModel?.weatherDescrption()))"
             }
         }
 
