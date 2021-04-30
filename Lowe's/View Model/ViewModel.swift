@@ -11,10 +11,10 @@ import Foundation
 
 class WeatherViewModel {
     
-    static private let baseURL = URL(string: " https://api.openweathermap.org/data/2.5/forecast")
+    static private let baseURL = URL(string: "https://api.openweathermap.org/data/2.5/forecast")
     static private let apiKey = "65d00499677e59496ca2f318eb68c049"
     
-    static func fetchWeather(searchTerm: String, completion: @escaping (Result<[Weather], WeatherError>) -> Void) {
+    static func fetchWeather(searchTerm: String, completion: @escaping (Result<CityWeatherResponse, WeatherError>) -> Void) {
         
         //1. build url
         guard let baseURL = baseURL else { return completion(.failure(.invalidURL)) }
@@ -37,8 +37,8 @@ class WeatherViewModel {
             
             // 5. decode data
             do {
-                let decodedData = try JSONDecoder().decode([Weather].self, from: data)
-                completion(.success(decodedData.self))
+                let decodedData = try JSONDecoder().decode(CityWeatherResponse.self, from: data)
+                completion(.success(decodedData))
             } catch {
                 print(error, error.localizedDescription)
                 return completion(.failure(.thrown(error)))
