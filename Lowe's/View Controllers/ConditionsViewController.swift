@@ -9,21 +9,27 @@ import UIKit
 
 class ConditionsViewController: UIViewController {
 
+    @IBOutlet weak var weatherConditionsTable: UITableView!
+    
+    var conditionsVM: ConditionsViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        weatherConditionsTable.delegate = self
+        weatherConditionsTable.rowHeight = 100
+    }
 
-        // Do any additional setup after loading the view.
+
+}
+
+extension ConditionsViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        conditionsVM?.getNumberOfTemperatures() ?? 0
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = weatherConditionsTable.dequeueReusableCell(withIdentifier: "weatherCell", for: indexPath) as? WeatherTableViewCell else { return UITableViewCell() }
+        return cell
     }
-    */
-
 }
