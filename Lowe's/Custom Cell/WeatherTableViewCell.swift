@@ -17,6 +17,8 @@ class WeatherTableViewCell: UITableViewCell {
             didSet {
                 weatherTemperatureLabel.text = "\(String(describing: viewModel?.temperature()))"
                 weatherConditionsLabel.text = "\(String(describing: viewModel?.weatherDescrption()))"
+                print(viewModel?.temperature() as Any)
+                print(viewModel?.weatherDescrption() as Any)
             }
         }
 

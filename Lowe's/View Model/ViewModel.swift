@@ -38,7 +38,10 @@ class WeatherViewModel {
             // 5. decode data
             do {
                 let decodedData = try JSONDecoder().decode(CityWeatherResponse.self, from: data)
-                completion(.success(decodedData))
+                DispatchQueue.main.async {
+                    completion(.success(decodedData))
+                    //print(decodedData)
+                }
             } catch {
                 print(error, error.localizedDescription)
                 return completion(.failure(.thrown(error)))

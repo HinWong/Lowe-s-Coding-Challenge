@@ -18,6 +18,8 @@ class WeatherDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateLabels()
+        navigationController?.navigationBar.barTintColor = .purple
     }
     
     func updateLabels() {
