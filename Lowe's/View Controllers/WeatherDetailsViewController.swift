@@ -14,16 +14,16 @@ class WeatherDetailsViewController: UIViewController {
     @IBOutlet weak var weatherTypeLabel: UILabel!
     @IBOutlet weak var weatherDescriptionLabel: UILabel!
     
-    var detailsVM:WeatherDetailsViewModel?
+    var detailsVM:WeatherDetailsViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateLabels()
+        self.updateLabels()
         navigationController?.navigationBar.barTintColor = .purple
     }
     
-    func updateLabels() {
-        weatherTempLabel.text = "\(detailsVM?.temperature())"
+    private func updateLabels() {
+        weatherTempLabel.text = "\(detailsVM!.temperature())"
         feelsLikeTempLabel.text = "\(detailsVM?.feelsLike() ?? "")"
         weatherTypeLabel.text = "\(detailsVM?.weatherType() ?? "")"
         weatherDescriptionLabel.text = "\(detailsVM?.weatherDescrption() ?? "")"

@@ -38,7 +38,19 @@ extension ConditionsViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = weatherConditionsTable.dequeueReusableCell(withIdentifier: "weatherCell", for: indexPath) as? WeatherTableViewCell else { return UITableViewCell() }
         let condition = conditionsVM?.getWeatherConditions(indexPath: indexPath)
         cell.updateLabels(condition: condition?.0 ?? "nil", temperature: condition?.1 ?? 0)
-        //cell.viewModel = WeatherDetailsViewModel(weather: Weather?, city: City?, main: Main?)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "WeatherDetailsVC") as? WeatherDetailsViewController {
+            vc.detailsVM = WeatherDetailsViewModel(
+                weather: (self.conditionsVM?.getWeathersAt(indexPath: indexPath))!,
+                city: (conditionsVM?.getCity())!,
+                main: (conditionsVM?.getMainAt(indexPath: indexPath))!)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
+
+        
     }
 }
