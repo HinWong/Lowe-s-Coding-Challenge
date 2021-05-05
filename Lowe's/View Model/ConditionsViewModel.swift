@@ -46,4 +46,9 @@ class ConditionsViewModel {
         let farenheit = tempConversion(kelvins: temperature)
         return (condition, farenheit)
     }
+    
+    func getWeatherDetails(row: Int) -> Weather? {
+        guard let weather = weatherConditions.list[row].weather.first else {return nil}
+        return weather
+    }
 }

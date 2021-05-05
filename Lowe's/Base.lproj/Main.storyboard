@@ -26,7 +26,6 @@
                                 <state key="normal" title="Lookup"/>
                                 <connections>
                                     <action selector="lookupButton:" destination="ISU-zT-fe2" eventType="touchUpInside" id="Zr8-FF-Mze"/>
-                                    <segue destination="dOD-2N-xvx" kind="show" id="L7y-7g-Mmo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -53,13 +52,13 @@
         <!--Conditions View Controller-->
         <scene sceneID="WHC-16-T2M">
             <objects>
-                <viewController id="dOD-2N-xvx" customClass="ConditionsViewController" customModule="Lowe_s" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConditionsVC" id="dOD-2N-xvx" customClass="ConditionsViewController" customModule="Lowe_s" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ksq-t4-sXL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lQ6-qb-rtm">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="weatherCell" rowHeight="91" id="ioB-97-K1Y" customClass="WeatherTableViewCell" customModule="Lowe_s" customModuleProvider="target">
@@ -97,6 +96,7 @@
                                         <connections>
                                             <outlet property="weatherConditionsLabel" destination="wnh-S9-h2z" id="LA5-kT-oce"/>
                                             <outlet property="weatherTemperatureLabel" destination="8q6-dp-SZ2" id="n3e-Ph-zoc"/>
+                                            <segue destination="euI-Ch-mka" kind="show" id="ZPG-Xh-7lN"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -125,29 +125,29 @@
             <objects>
                 <viewController id="euI-Ch-mka" customClass="WeatherDetailsViewController" customModule="Lowe_s" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="okU-JL-Rdc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HU9-6Q-4Cc">
-                                <rect key="frame" x="10" y="54" width="394" height="60"/>
+                                <rect key="frame" x="10" y="10" width="394" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0YR-VH-wIm">
-                                <rect key="frame" x="10" y="155" width="394" height="36"/>
+                                <rect key="frame" x="10" y="111" width="394" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jus-Md-7UA">
-                                <rect key="frame" x="10" y="201" width="394" height="21"/>
+                                <rect key="frame" x="10" y="157" width="394" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0VX-V8-vae">
-                                <rect key="frame" x="10" y="124" width="394" height="21"/>
+                                <rect key="frame" x="10" y="80" width="394" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -170,6 +170,7 @@
                             <constraint firstItem="0VX-V8-vae" firstAttribute="top" secondItem="HU9-6Q-4Cc" secondAttribute="bottom" constant="10" id="tWW-cl-A1I"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="4AA-rD-awS"/>
                     <connections>
                         <outlet property="feelsLikeTempLabel" destination="0VX-V8-vae" id="4Vu-o5-Yor"/>
                         <outlet property="weatherDescriptionLabel" destination="Jus-Md-7UA" id="phz-aS-wkU"/>
